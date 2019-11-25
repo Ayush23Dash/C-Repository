@@ -12,15 +12,21 @@ void pallindrome(int n)
 		arr[index]=r;
 		index++;
 	}
+	
+//	To print the digits as an array
 	for(i=(index-1);i>=0;i--)
 	{
 		printf("%d ",arr[i]);
 	}
+	
+//	To put digits and its reverse numbers in two arrays
 	for(i=0,j=(index-1);i<index,j>=0;i++,j--)
 	{
 		ar1[i]=arr[i];
 		ar2[i]=arr[j];
 	}
+	
+//	To increase counter equal to index if its a pallindrome
 	for(i=0;i<index;i++)
 	{
 		if(ar1[i]==ar2[i])
@@ -28,12 +34,15 @@ void pallindrome(int n)
 		else
 		p=0;
 	}
+	
+//	To print pallindrome
 	if(p==(index))
 	printf("\nIt is a pallindrome");
 	else
 	printf("\nIt is not a pallindrome");
 }
 
+//Main Function
 int main()
 {
 	int n,ch;
