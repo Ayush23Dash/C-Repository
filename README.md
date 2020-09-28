@@ -1,2 +1,2 @@
 # C-plus-plus--Repository
-In this repo, I will be adding programs written in c++
+This repo contains all of the problems that I solve in C++.
