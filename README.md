@@ -1,2 +1,2 @@
 # C-plus-plus--Repository
-Problems that I code in C++.
+This repo contains the problems that I code in C++.
