@@ -1,2 +1,2 @@
 # C-plus-plus--Repository
-This repository contains the problems that I code in C++.(inclusive of DSA)
+This repository contains the solutions that I code in C++.(inclusive of DSA)
