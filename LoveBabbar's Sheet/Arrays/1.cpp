@@ -3,9 +3,8 @@
 using namespace std;
 int main()
 {
-	int n,temp;
+	int n,temp,temp1;
 	vector<int>arr;
-	vector<int>res;
 	cout<<"Enter size of array";
 	cin>>n;
 	for(int i{0};i<n;i++)
@@ -13,14 +12,19 @@ int main()
 		cin>>temp;
 		arr.push_back(temp);
 	}
-	for(int j{n-1};j>=0;j--)
+	int start=0,end=n-1;
+	while(start<end)
 	{
-		res.push_back(arr.at(j));
+		temp1=arr.at(start);
+		arr.at(start)=arr.at(end);
+		arr.at(end)=temp1;
+		start++;
+		end--;
 	}
 	cout<<"Reversed Array : \n";
 	for(int i{0};i<n;i++)
 	{
-		cout<<res.at(i)<<"\n";
+		cout<<arr.at(i)<<"\n";
 	}
 	
 	return 0;
