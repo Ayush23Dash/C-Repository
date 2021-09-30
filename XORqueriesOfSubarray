@@ -1,0 +1,40 @@
+// Ans to https://leetcode.com/problems/xor-queries-of-a-subarray/
+class Solution {
+public:
+    vector<int> xorQueries(vector<int>& arr, vector<vector<int>>& queries) {
+        vector<int>preArr,ans;
+        // for(int i=0;i<queries.size();i++)
+        // {
+        //     int start = queries[i][0];
+        //     int end = queries[i][1];
+        //     int f=arr[start];
+        //     for(int i=start+1;i<=end;i++)
+        //     {
+        //          f = f^arr[i];
+        //     }
+        //     ans.push_back(f);
+        // }
+        
+        preArr.push_back(arr[0]);
+        for(int i=1;i<arr.size();i++)
+        {
+            int temp=arr[i]^preArr[i-1];
+            preArr.push_back(temp);
+        }
+        for(int i=0;i<preArr.size();i++)
+        {
+            cout<<preArr[i]<<" ";
+        }
+        for(int i=0;i<queries.size();i++)
+        {
+            int start = queries[i][0];
+            int end = queries[i][1];
+            if(start==0) ans.push_back(preArr[end]);
+            else{
+                ans.push_back(preArr[end]^preArr[start-1]);
+            }
+            
+        }
+        return ans;
+    }
+};
