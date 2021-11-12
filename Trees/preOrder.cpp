@@ -44,6 +44,12 @@ int main()
 	p1->left=p3;
 	p1->right=p4;
 
+//      4
+//     / \
+//    1   6
+//   / \
+//  5   2
+
 	preOrder(root);
 return 0;
 }
